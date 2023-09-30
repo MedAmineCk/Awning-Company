@@ -1,0 +1,30 @@
+@import "main.css";
+@import "normalize.css";
+@import "variables";
+@import "default";
+@import "faqs";
+
+html, body {
+  background: colors(main_bg);
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+
+  main{
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  @import 'mobile';
+}
+
+@media (min-width: 769px) {
+  @import 'desktop';
+}

@@ -1,0 +1,160 @@
+$header_height: 60px;
+header {
+    background: #00542C;
+    width: 100%;
+    height: $header_height;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+
+    .notice-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .logo {
+            img {
+                width: 80px;
+            }
+        }
+        .contact-info {
+            color: #fff;
+            margin-right: 45px;
+            .flex-container {
+                display: flex;
+                .icon {
+                    $size: 20px;
+                    width: $size;
+                    height: $size;
+                    border-radius: $size;
+                    background: #6d6d6d;
+                    color: #fff;
+                    margin-right: 5px;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+            span.sub {
+                font-size: 8px;
+            }
+        }
+    }
+
+    nav {
+        width: 100%;
+        background-color: greenyellow;
+        padding: 20px 0;
+        display: none;
+
+        &.open{
+            display: block;
+        }
+
+        .section-container{
+            flex-direction: column;
+        }
+
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: 20px;
+                text-align: center;
+                a {
+                    color: #000;
+                }
+
+            }
+        }
+
+        .contactUs-btn{
+            color: green;
+            border: 2px dashed green;
+            border-radius: 35px;
+            background: #fff ;
+            padding: 10px 20px;
+        }
+    }
+
+    .nav_tab_icon {
+        $size: 40px;
+        width: $size - 20px;
+        height: $size;
+        position: absolute;
+        z-index: 3;
+        $dimension: 15px;
+        top: $dimension;
+        right: $dimension;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .item {
+            $height: 4px;
+            height: $height;
+            border-radius: $height;
+            background-color: #fff;
+            margin-bottom: 4px;
+            transition: all linear 0.2s;
+
+            &:nth-child(1) {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: 60%;
+            }
+
+            &:nth-child(3) {
+                width: 30%;
+            }
+        }
+
+        &.open {
+            .item {
+                $height: 5px;
+                height: $height;
+                border-radius: $height;
+                margin-bottom: 6px;
+
+                &:nth-child(1) {
+                    width: 100%;
+                    transform: rotate(-45deg) translate(-8px, 6px);
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .awning{
+        display: flex;
+        height: 60px;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 30px;
+
+        div {
+            flex: 1;
+            height: 100%;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            &:nth-child(even) {
+                background-color: #008E4A;
+            }
+            &:nth-child(odd) {
+                background-color: #00BF63;
+            }
+        }
+    }
+}
